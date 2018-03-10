@@ -1,1 +1,1 @@
-run $ npm install to download necessary dependencies, and $ npm run build to create their own dist folder with a bundle.js file, then open index.html to use game
+go to project root directory run $ npm install to download necessary dependencies, and $ npm run build to create their own dist folder with a bundle.js file, then open index.html to use game $npm run start in the command line, webpack will automatically spin up a development server at http://localhost:8080/.
