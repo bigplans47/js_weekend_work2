@@ -13,13 +13,13 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      title: 'Ping Pong',
-      template: './src/index.html',
-      inject: 'body'
-    })
-  ],
+  // plugins: [
+  //   new HtmlWebpackPlugin({
+  //     title: 'Ping Pong',
+  //     template: './src/index.html',
+  //     inject: 'body'
+  //   })
+  // ],
   plugins: [
     new UglifyJsPlugin({ sourceMap: true}),
     new CleanWebpackPlugin(['dist']),   // new line
@@ -40,7 +40,10 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
+        exclude: [
+          /node_modules/,
+          /spec/
+        ],
         loader: "eslint-loader"
       }
     ]
