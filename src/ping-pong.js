@@ -1,4 +1,4 @@
-function pingPong(goal) {
+export function pingPong(goal) {
   var output = [];
   for (var i = 1; i <= goal; i++) {
     if (i % 15 === 0) {
@@ -13,6 +13,3 @@ function pingPong(goal) {
   }
   return output;
 }
-
-exports.pingPongModule = pingPong;
-exports.pigsModule = "pigs";
